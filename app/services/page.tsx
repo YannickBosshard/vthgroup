@@ -98,7 +98,7 @@ export default function ServicesPage() {
                 The Actively Managed Certificate (AMC) is one widely used vehicle for this purpose — a structured product whose underlying is managed discretionarily during the term according to a defined strategy. Our role is to advise on vehicle selection, structure, issuer, and regulatory requirements. The issuer, distribution, and product liability remain with the regulated counterparties.
               </p>
               <p className="font-sans text-[11px] text-stone leading-relaxed border-l-2 border-stone-light/50 pl-4 italic">
-                VTH Group does not issue, guarantee, or distribute financial products. This service constitutes advisory only and does not constitute an offer or solicitation to invest.
+                VTH Group acts exclusively as a structural advisor and does not act as promoter, distributor, or placement agent for any financial product. VTH Group does not receive distribution fees, retrocessions, or volume-based compensation in connection with any AMC or structured product. All introductions to issuers and structuring partners are provided on a purely advisory basis.
               </p>
             </div>
           </div>
