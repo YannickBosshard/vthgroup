@@ -46,7 +46,7 @@ const leaders = [
   },
   {
     name: 'Stefano Augstburger',
-    photo: '/team/stefano-augstburger.jpg',
+    photo: '/team/stefano-augstburger.png',
     role: 'Partner Relations & Networking',
     subtitle: 'Entrepreneur · Partner Relations · Networking',
     isManagement: false,
