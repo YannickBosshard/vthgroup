@@ -73,23 +73,6 @@ const active = [
     image: '/images/portfolio/gravel-pit/gravel-pit.png',
     logo: null,
   },
-  {
-    name: 'Royal Aesthetik',
-    sector: 'Healthcare',
-    location: 'Kanton Schwyz, Switzerland',
-    category: 'Medical Aesthetics — Clinic',
-    description:
-      'Royal Aesthetik is a premium medical aesthetics clinic operating in Kanton Schwyz under the medical direction of Dr. med. Roya Jeyrani. The clinic combines modern medicine with individual care — delivering results that are noticed, not announced.',
-    highlights: [
-      'Medical aesthetics clinic, Kanton Schwyz',
-      'Under medical direction of Dr. med. Roya Jeyrani',
-      'Premium outpatient aesthetic treatments',
-    ],
-    status: 'Active',
-    image: '/images/portfolio/royal-aesthetik/royal-aesthetik.jpg',
-    logo: '/images/portfolio/royal-aesthetik/royal-aesthetik-logo.jpg',
-    logoHeight: 'h-32',
-  },
 ]
 
 export default function PortfolioPage() {

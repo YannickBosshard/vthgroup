@@ -40,15 +40,6 @@ const portfolio = [
     image: '/images/portfolio/swiss-open-mri/swiss-open-mri.png',
     description: 'Venture-stage radiology concept offering open MRI, CT, fluoroscopy, and sonography — addressing a structural gap in outpatient diagnostic capacity in the Swiss market.',
   },
-  {
-    name: 'Royal Aesthetik',
-    category: 'Aesthetic Medicine',
-    sector: 'Healthcare',
-    location: 'Switzerland',
-    status: 'Active',
-    image: '/images/portfolio/royal-aesthetik/royal-aesthetik.jpg',
-    description: 'Premium aesthetic medicine practice offering non-surgical treatments and skin care. A growing healthcare brand with expansion potential in the Swiss market.',
-  },
 ]
 
 export default function PortfolioSection() {
