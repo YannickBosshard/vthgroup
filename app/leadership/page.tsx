@@ -108,7 +108,7 @@ export default function LeadershipPage() {
                   <div className="mb-6">
                     <div className="w-full aspect-[3/4] overflow-hidden bg-stone-light/20 mb-5">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={person.photo} alt={person.name} className="w-full h-full object-cover object-top grayscale" />
+                      <img src={person.photo} alt={person.name} className="w-full h-full object-cover object-center grayscale" />
                     </div>
                     {person.isManagement && (
                       <span className="font-sans text-[9px] tracking-[0.2em] uppercase text-bronze bg-bronze/10 px-2 py-1">
