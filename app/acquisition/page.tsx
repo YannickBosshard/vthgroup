@@ -1,13 +1,9 @@
-import type { Metadata } from 'next'
+'use client'
+
 import PageHero from '@/components/ui/PageHero'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
-
-export const metadata: Metadata = {
-  title: 'Acquisition Criteria',
-  description:
-    'VTH Group acquisition criteria for real estate and private equity. Minimum EUR 5 million. Value-Add, Residential, Light Industrial, and company investments across Europe.',
-}
+import { useLanguage } from '@/lib/i18n/LanguageContext'
 
 const realEstate = [
   {
@@ -111,31 +107,30 @@ function CriteriaTable({ criteria }: { criteria: { label: string; value: string 
 }
 
 export default function AcquisitionPage() {
+  const { t } = useLanguage()
+  const a = t.acquisition
+
   return (
     <>
-      <PageHero
-        label="Acquisition Criteria"
-        title="We move fast.<br/>We decide directly."
-        subtitle="VTH Group continuously seeks real estate and company investment opportunities matching our criteria. As a professional, owner-managed group we offer rapid decision-making and a discreet, efficient process."
-      />
+      <PageHero label={a.hero.label} title={a.hero.title} subtitle={a.hero.subtitle} />
 
       {/* Intro */}
       <section className="py-12 bg-cream-100 border-b border-stone-light/40">
         <div className="container-vth">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-4">
-              <p className="section-label text-bronze mb-3">Two profiles</p>
+              <p className="section-label text-bronze mb-3">{a.twoProfiles}</p>
               <div className="flex flex-col gap-3 mt-4">
-                <a href="#real-estate" className="btn-link">Real Estate criteria</a>
-                <a href="#private-equity" className="btn-link">Private Equity criteria</a>
+                <a href="#real-estate" className="btn-link">{a.realEstateCta}</a>
+                <a href="#private-equity" className="btn-link">{a.privateEquityCta}</a>
               </div>
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
               <p className="font-sans text-stone-dark text-base leading-relaxed font-light">
-                VTH Group operates two distinct acquisition tracks — real estate and private equity / company investments. Both share the same core principles: off-market preference, rapid and direct decision-making, and genuine long-term partnership orientation.
+                {a.introBody1}
               </p>
               <p className="font-sans text-stone-dark text-base leading-relaxed font-light mt-4">
-                If you have an asset, site, company, or concept that may align with our criteria, reach out directly. We treat every submission with discretion and respond personally to every serious enquiry.
+                {a.introBody2}
               </p>
             </div>
           </div>
@@ -147,11 +142,11 @@ export default function AcquisitionPage() {
         <section className="py-14 bg-cream-50 border-b border-stone-light/40">
           <div className="container-vth">
             <div className="flex items-center gap-4 mb-2">
-              <p className="section-label text-bronze">Real Estate Acquisition Profile</p>
+              <p className="section-label text-bronze">{a.reLabel}</p>
               <div className="flex-1 h-px bg-stone-light/40" />
             </div>
             <p className="font-sans text-sm text-stone mt-2 max-w-2xl">
-              We continuously seek properties matching our acquisition criteria. As a professional, owner-managed partner we guarantee a swift decision process and — in case of a positive acquisition decision — a smooth and discreet transaction.
+              {a.reIntro}
             </p>
           </div>
         </section>
@@ -184,11 +179,11 @@ export default function AcquisitionPage() {
         <section className="py-14 bg-charcoal border-b border-stone-dark/40">
           <div className="container-vth">
             <div className="flex items-center gap-4 mb-2">
-              <p className="section-label text-bronze">Private Equity & Company Acquisition Profile</p>
+              <p className="section-label text-bronze">{a.peLabel}</p>
               <div className="flex-1 h-px bg-stone-dark/40" />
             </div>
             <p className="font-sans text-sm text-stone mt-2 max-w-2xl">
-              Beyond real estate, VTH Group invests in companies, entrepreneurial ventures, and business concepts across our five core sectors. We back exceptional teams with capital, network, and genuine operational partnership.
+              {a.peIntro}
             </p>
           </div>
         </section>
@@ -232,20 +227,20 @@ export default function AcquisitionPage() {
         <div className="container-vth">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7">
-              <p className="section-label text-bronze mb-4">Submit an Opportunity</p>
+              <p className="section-label text-bronze mb-4">{a.submitLabel}</p>
               <h2 className="font-serif text-3xl font-light text-charcoal leading-tight mb-4">
-                Have a property, company, or concept that fits?
+                {a.submitTitle}
               </h2>
               <p className="font-sans text-stone-dark text-sm leading-relaxed font-light">
-                We welcome direct submissions from owners, founders, developers, brokers, and intermediaries. All enquiries are handled with full discretion and reviewed personally by our investment team.
+                {a.submitBody}
               </p>
             </div>
             <div className="lg:col-span-4 lg:col-start-9 space-y-4">
               <Link href="/contact" className="btn-primary justify-center w-full block text-center">
-                Submit an opportunity <ArrowUpRight size={14} className="inline" />
+                {a.submitCta} <ArrowUpRight size={14} className="inline" />
               </Link>
               <div className="text-center space-y-1 pt-2">
-                <p className="font-sans text-[10px] text-stone-dark tracking-wide uppercase">Direct contact</p>
+                <p className="font-sans text-[10px] text-stone-dark tracking-wide uppercase">{a.directContact}</p>
                 <a href="tel:+41787479221" className="font-sans text-sm text-stone hover:text-charcoal transition-colors duration-200 block">
                   +41 78 747 92 21 — General
                 </a>

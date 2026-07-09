@@ -1,11 +1,7 @@
-import type { Metadata } from 'next'
-import PageHero from '@/components/ui/PageHero'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Portfolio',
-  description:
-    'VTH Group\'s active investment portfolio across Real Estate and Infrastructure in European markets.',
-}
+import PageHero from '@/components/ui/PageHero'
+import { useLanguage } from '@/lib/i18n/LanguageContext'
 
 const active = [
   {
@@ -20,7 +16,6 @@ const active = [
       'Outpatient diagnostic services — Swiss market',
       'Venture investment — healthcare sector',
     ],
-    status: 'Active',
     image: '/images/portfolio/swiss-open-mri/swiss-open-mri.png',
     logo: '/images/portfolio/swiss-open-mri/swiss-open-mri-logo.png',
     logoHeight: 'h-24',
@@ -37,7 +32,6 @@ const active = [
       'Three-phase delivery structure',
       'Fully owned, equity-financed land',
     ],
-    status: 'Active',
     image: '/images/portfolio/future-residence/future-residence.png',
     logo: null,
   },
@@ -53,7 +47,6 @@ const active = [
       'E60 motorway access, industrial zoning',
       'Targeting major international logistics operators',
     ],
-    status: 'Active',
     image: '/images/portfolio/airport-area/airport-area.png',
     logo: null,
   },
@@ -69,26 +62,24 @@ const active = [
       'Fully in-house operated — no third-party operator',
       'Structural demand from EU-funded Romanian infrastructure programme',
     ],
-    status: 'Active',
     image: '/images/portfolio/gravel-pit/gravel-pit.png',
     logo: null,
   },
 ]
 
 export default function PortfolioPage() {
+  const { t } = useLanguage()
+  const po = t.portfolio
+
   return (
     <>
-      <PageHero
-        label="Portfolio"
-        title="Investments built<br/>to last."
-        subtitle="Our portfolio reflects disciplined investment across sectors where we have genuine conviction, operational knowledge, and long-term relationships. All investments are held on a fully owned, equity-financed basis."
-      />
+      <PageHero label={po.hero.label} title={po.hero.title} subtitle={po.hero.subtitle} />
 
       {/* Disclaimer */}
       <section className="py-6 bg-stone-light/10 border-b border-stone-light/40">
         <div className="container-vth">
           <p className="font-sans text-xs text-stone leading-relaxed max-w-3xl">
-            The information on this page is provided for general reference purposes only and does not constitute an offer, solicitation, or invitation to invest. VTH Group does not make investment recommendations through this website.
+            {po.disclaimer}
           </p>
         </div>
       </section>
@@ -97,7 +88,7 @@ export default function PortfolioPage() {
       <section className="py-section bg-cream-50">
         <div className="container-vth">
           <div className="flex items-center gap-4 mb-12">
-            <p className="section-label text-bronze">Active Investments</p>
+            <p className="section-label text-bronze">{po.activeLabel}</p>
             <div className="flex-1 h-px bg-stone-light/40" />
           </div>
           <div className="space-y-px bg-stone-light/30">
@@ -129,7 +120,7 @@ export default function PortfolioPage() {
                   <div className="lg:col-span-8 p-10 lg:p-12 flex flex-col justify-center">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="w-2 h-2 bg-bronze rounded-full" />
-                      <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze">{p.status}</span>
+                      <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze">{po.status}</span>
                     </div>
                     <h2 className="font-serif text-2xl font-medium text-charcoal mb-1">{p.name}</h2>
                     <p className="font-sans text-xs tracking-[0.12em] uppercase text-stone mb-1">{p.sector}</p>
@@ -157,12 +148,12 @@ export default function PortfolioPage() {
         <div className="container-vth">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7">
-              <p className="section-label text-bronze mb-4">Geographic Focus</p>
+              <p className="section-label text-bronze mb-4">{po.geoTitle}</p>
               <h2 className="font-serif text-2xl font-light text-cream-50 leading-tight mb-4">
-                Central and Eastern Europe — where fundamentals meet opportunity.
+                {po.geoSubTitle}
               </h2>
               <p className="font-sans text-stone text-sm leading-relaxed">
-                Our current portfolio is concentrated in Romania — a market characterised by strong structural growth, EU accession tailwinds, and a significant infrastructure investment pipeline. We operate through local partnerships with deep regional expertise, enabling off-market access and efficient execution.
+                {po.geoBody}
               </p>
             </div>
           </div>
