@@ -76,6 +76,21 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      {/* Map */}
+      <section className="bg-stone-light/20">
+        <div className="w-full h-[400px]">
+          <iframe
+            src="https://maps.google.com/maps?q=Bahnhof-Park+2,+6340+Baar,+Switzerland&output=embed"
+            width="100%"
+            height="400"
+            style={{ border: 0, filter: 'grayscale(1)' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="VTH Group Office — Bahnhof-Park 2, Baar"
+          />
+        </div>
+      </section>
     </>
   )
 }
