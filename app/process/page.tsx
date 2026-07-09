@@ -49,40 +49,42 @@ export default function ProcessPage() {
 
   function PhaseRow({ phase, tPhase, alt }: { phase: typeof managementRiskPhases[0], tPhase: typeof p.phases[0], alt: boolean }) {
     return (
-      <div className={`py-16 border-b border-stone-light/40 grid grid-cols-1 lg:grid-cols-12 gap-8 ${alt ? 'bg-cream-100' : 'bg-cream-50'}`}>
-        <div className="lg:col-span-3 container-vth lg:pl-0">
-          <div className="font-serif text-6xl font-light text-stone-light/40 leading-none mb-4 w-24">{phase.number}</div>
-          <h2 className="font-serif text-xl font-medium text-charcoal mb-2">{tPhase.name}</h2>
-          <p className="font-sans text-xs text-bronze">{tPhase.timeline}</p>
-        </div>
-        <div className="lg:col-span-5 container-vth lg:pl-0">
-          <div className="grid grid-cols-2 gap-6">
-            <div>
-              <p className="section-label text-stone-dark mb-3">{tPhase.left.title}</p>
-              <ul className="space-y-2">
-                {tPhase.left.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2">
-                    <span className="w-1 h-1 bg-bronze rounded-full shrink-0 mt-1.5" />
-                    <span className="font-sans text-xs text-stone-dark leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="section-label text-stone-dark mb-3">{tPhase.right.title}</p>
-              <ul className="space-y-2">
-                {tPhase.right.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2">
-                    <span className="w-1 h-1 bg-bronze rounded-full shrink-0 mt-1.5" />
-                    <span className="font-sans text-xs text-stone-dark leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+      <div className={`py-16 border-b border-stone-light/40 ${alt ? 'bg-cream-100' : 'bg-cream-50'}`}>
+        <div className="container-vth grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-3">
+            <div className="font-serif text-6xl font-light text-stone-light/40 leading-none mb-4 w-24">{phase.number}</div>
+            <h2 className="font-serif text-xl font-medium text-charcoal mb-2">{tPhase.name}</h2>
+            <p className="font-sans text-xs text-bronze">{tPhase.timeline}</p>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="grid grid-cols-2 gap-6">
+              <div>
+                <p className="section-label text-stone-dark mb-3">{tPhase.left.title}</p>
+                <ul className="space-y-2">
+                  {tPhase.left.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-2">
+                      <span className="w-1 h-1 bg-bronze rounded-full shrink-0 mt-1.5" />
+                      <span className="font-sans text-xs text-stone-dark leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="section-label text-stone-dark mb-3">{tPhase.right.title}</p>
+                <ul className="space-y-2">
+                  {tPhase.right.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-2">
+                      <span className="w-1 h-1 bg-bronze rounded-full shrink-0 mt-1.5" />
+                      <span className="font-sans text-xs text-stone-dark leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="lg:col-span-4 container-vth lg:pl-0">
-          <p className="font-sans text-sm text-stone leading-relaxed">{tPhase.description}</p>
+          <div className="lg:col-span-4">
+            <p className="font-sans text-sm text-stone leading-relaxed">{tPhase.description}</p>
+          </div>
         </div>
       </div>
     )
