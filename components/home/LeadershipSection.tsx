@@ -27,7 +27,7 @@ const leaders = [
   },
   {
     name: 'Stefano Augstburger',
-    photo: '/team/stefano-augstburger.jpg',
+    photo: '/team/stefano-augstburger.png',
     role: 'Partner Relations & Networking',
     background: 'UBS · Founder & Co-CEO, YASAI (exited 2024)',
     focus: 'Institutional clients · Capital markets · Co-investment engagement',
