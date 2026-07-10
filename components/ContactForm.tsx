@@ -25,10 +25,14 @@ export default function ContactForm() {
     try {
       const res = await fetch('https://formspree.io/f/xqevrbao', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
         body: JSON.stringify(data),
       })
-      if (res.ok) {
+      const json = await res.json()
+      if (res.ok && !json.errors) {
         setState('success')
       } else {
         setState('error')
