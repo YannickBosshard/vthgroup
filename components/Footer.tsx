@@ -28,8 +28,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-4">
             <div className="mb-8">
-              <div className="font-serif text-3xl font-medium text-cream-50 tracking-tight mb-1">VTH Group</div>
-              <div className="font-sans text-[9px] tracking-[0.35em] uppercase text-bronze">Switzerland</div>
+              <div className="font-serif text-3xl font-medium text-cream-50 tracking-tight">VTH Group</div>
             </div>
             <p className="font-sans text-sm text-stone leading-relaxed max-w-xs mb-8">
               {t.footer.tagline}
