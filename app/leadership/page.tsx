@@ -59,9 +59,9 @@ const leaders = [
     subtitle: 'COO · Partner',
     isManagement: false,
     quote: 'Real estate and businesses follow the same principles: we invest where solid fundamentals meet development potential — creating enduring value.',
-    bio: 'Tobias Baur is Partner and Director at VTH Management AG, responsible for the strategic direction and execution of investments in real estate and company building.',
+    bio: 'Tobias Baur is COO & Partner at VTH Group, responsible for the strategic direction and execution of investments in real estate and company building.',
     experience: 'His focus lies in identifying investment opportunities through targeted activation and realisation of development potential.',
-    background: ['Head of Investment Management, private equity', 'Partner & Director, VTH Management AG', 'Real estate development specialist'],
+    background: ['Head of Investment Management, private equity', 'COO & Partner, VTH Group', 'Real estate development specialist'],
     competencies: ['Identifying value creation potential', 'Developing investment strategies', 'Executing defined investment strategies', 'Optimising processes, structures & operations'],
   },
   {
