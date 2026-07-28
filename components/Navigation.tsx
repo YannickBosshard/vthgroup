@@ -75,7 +75,7 @@ export default function Navigation() {
             <Link href="/" className={`transition-colors duration-300 ${logoColor}`} aria-label="VTH Group — Home">
               {solid ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/logo-vth-group.svg" alt="VTH Group" className="h-8 w-auto" />
+                <img src="/logo-vth-group.svg" alt="VTH Group" className="h-10 w-auto" />
               ) : (
                 <div className="flex flex-col leading-none">
                   <span className="font-serif text-2xl font-medium tracking-tight">VTH Group</span>
