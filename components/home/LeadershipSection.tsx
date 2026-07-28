@@ -14,7 +14,7 @@ const leaders = [
   {
     name: 'Yannick Bosshard',
     photo: '/team/yannick-bosshard.png',
-    role: 'Investment & Asset Management',
+    role: 'CIO · Co-Founder · Member of the Board',
     background: 'UBS · Lakeward Management · allswiss',
     focus: 'Investment structuring · PE analysis · Real estate',
   },
