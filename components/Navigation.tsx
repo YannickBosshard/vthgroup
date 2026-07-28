@@ -75,9 +75,6 @@ export default function Navigation() {
             <Link href="/" className={`transition-colors duration-300 ${logoColor}`} aria-label="VTH Group — Home">
               <div className="flex flex-col leading-none">
                 <span className="font-serif text-2xl font-medium tracking-tight">VTH Group</span>
-                <span className={`font-sans text-[8px] tracking-[0.3em] uppercase mt-0.5 ${solid ? 'text-bronze' : 'text-bronze-light/80'}`}>
-                  Switzerland
-                </span>
               </div>
             </Link>
 
