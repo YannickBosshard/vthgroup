@@ -55,8 +55,8 @@ const leaders = [
   {
     name: 'Tobias Baur',
     photo: '/team/tobias-baur.png',
-    role: 'Partner & Director, VTH Management AG',
-    subtitle: 'Partner · Director',
+    role: 'COO & Partner',
+    subtitle: 'COO · Partner',
     isManagement: false,
     quote: 'Real estate and businesses follow the same principles: we invest where solid fundamentals meet development potential — creating enduring value.',
     bio: 'Tobias Baur is Partner and Director at VTH Management AG, responsible for the strategic direction and execution of investments in real estate and company building.',

@@ -35,7 +35,7 @@ const leaders = [
   {
     name: 'Tobias Baur',
     photo: '/team/tobias-baur.png',
-    role: 'Partner & Director',
+    role: 'COO & Partner',
     background: 'Strategic investment · Real estate · Business development',
     focus: 'Value creation · Investment strategy · Operations',
   },
