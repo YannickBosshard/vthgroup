@@ -42,7 +42,7 @@ const leaders = [
   {
     name: 'Damjan Gojkovic',
     photo: '/team/damjan-gojkovic.jpg',
-    role: 'Investment Manager',
+    role: 'Senior Investment Manager',
     background: 'UBS · Structured finance',
     focus: 'Deal sourcing · Due diligence · Financial analysis',
   },

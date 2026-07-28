@@ -67,8 +67,8 @@ const leaders = [
   {
     name: 'Damjan Gojkovic',
     photo: '/team/damjan-gojkovic.jpg',
-    role: 'Investment Manager',
-    subtitle: 'Investment Manager',
+    role: 'Senior Investment Manager',
+    subtitle: 'Senior Investment Manager',
     isManagement: false,
     quote: 'Capital reaches its full potential through proper structure — precise analysis and entrepreneurial thinking reflect my passion for sustainable investment decisions.',
     bio: 'Damjan Gojkovic is responsible for the identification, evaluation, and execution of investment opportunities across real estate, private equity, and structured finance.',
