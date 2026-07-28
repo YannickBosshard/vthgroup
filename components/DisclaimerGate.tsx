@@ -138,8 +138,7 @@ export default function DisclaimerGate() {
       >
         {/* Header */}
         <div className="px-8 pt-8 pb-6 border-b border-stone-light/40 shrink-0">
-          <div className="font-serif text-2xl font-medium text-charcoal tracking-tight mb-0.5">VTH Management AG</div>
-          <div className="font-sans text-[9px] tracking-[0.3em] uppercase text-bronze mb-6">Switzerland</div>
+          <div className="font-serif text-2xl font-medium text-charcoal tracking-tight mb-6">VTH Management AG</div>
           <h1
             id="disclaimer-title"
             className="font-sans text-xs font-medium tracking-[0.18em] uppercase text-charcoal"
