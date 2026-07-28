@@ -72,15 +72,9 @@ export default function Navigation() {
         <div className="container-vth">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className={`transition-colors duration-300 ${logoColor}`} aria-label="VTH Group — Home">
-              {solid ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src="/logo-vth-group.svg" alt="VTH Group" className="h-10 w-auto" />
-              ) : (
-                <div className="flex flex-col leading-none">
-                  <span className="font-serif text-2xl font-medium tracking-tight">VTH Group</span>
-                </div>
-              )}
+            <Link href="/" aria-label="VTH Group — Home">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-vth-group.svg" alt="VTH Group" className="h-10 w-auto" />
             </Link>
 
             {/* Desktop nav */}
